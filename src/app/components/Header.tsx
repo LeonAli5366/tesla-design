@@ -2,9 +2,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { BsQuestionCircle } from "react-icons/bs";
-import { CiGlobe } from "react-icons/ci";
-import { RxAvatar } from "react-icons/rx";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -72,11 +69,7 @@ export default function Header() {
           </button>
         </li>
       </ol>
-      <div className="flex items-center gap-x-3">
-        {/* <BsQuestionCircle size={20} />
-        <CiGlobe size={24} />
-        <RxAvatar size={24} /> */}
-      </div>
+      <div className="flex items-center gap-x-3"></div>
     </header>
   );
 }
