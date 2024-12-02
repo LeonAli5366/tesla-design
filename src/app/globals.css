@@ -19,3 +19,12 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@layer components {
+  .underline-thickness {
+    text-decoration-thickness: 1px;
+  }
+  .underline-thickness:hover {
+    text-decoration-thickness: 2px;
+  }
+}
