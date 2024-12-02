@@ -6,9 +6,14 @@ const VideoSlide = () => {
 
   // Handle button click to change video source
   const changeVideo = (newVideoSrc: string) => {
-    const videoElement = document.getElementById("videoPlayer");
-    videoElement.pause();
-    videoElement.load();
+    const videoElement = document.getElementById(
+      "videoPlayer"
+    ) as HTMLVideoElement | null;
+    // Check if videoElement is not null before calling methods
+    if (videoElement) {
+      videoElement.pause();
+      videoElement.load();
+    }
     setVideoSrc(newVideoSrc);
   };
   return (
