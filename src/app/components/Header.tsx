@@ -1,4 +1,6 @@
 "use client";
+import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import { BsQuestionCircle } from "react-icons/bs";
 import { CiGlobe } from "react-icons/ci";
@@ -6,14 +8,17 @@ import { RxAvatar } from "react-icons/rx";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [logo, setLogo] = useState("/images/logo-white.png");
 
   // Detect scroll position and toggle `isScrolled` state
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 0) {
         setIsScrolled(true);
+        setLogo("/images/logo-black.png");
       } else {
         setIsScrolled(false);
+        setLogo("/images/logo-white.png");
       }
     };
 
@@ -30,7 +35,11 @@ export default function Header() {
         isScrolled ? "bg-white text-black shadow" : "bg-transparent text-white"
       } fixed top-0 h-14 w-full flex items-center justify-between px-16 z-10 transition-all duration-300`}
     >
-      <h1 className=""></h1>
+      <Link href={"/"}>
+        <abbr title="Home">
+          <Image src={logo} alt="" width={100} height={100} />
+        </abbr>
+      </Link>
       <ol className="flex items-center justify-center text-sm font-semibold">
         <li>
           <button className="transition-all duration-300 rounded py-1 px-5 hover:backdrop-blur-lg">
@@ -64,9 +73,9 @@ export default function Header() {
         </li>
       </ol>
       <div className="flex items-center gap-x-3">
-        <BsQuestionCircle size={20} />
+        {/* <BsQuestionCircle size={20} />
         <CiGlobe size={24} />
-        <RxAvatar size={24} />
+        <RxAvatar size={24} /> */}
       </div>
     </header>
   );
