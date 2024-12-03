@@ -30,14 +30,14 @@ export default function Header() {
     <header
       className={`${
         isScrolled ? "bg-white text-black shadow" : "bg-transparent text-white"
-      } fixed top-0 h-14 w-full flex items-center justify-between px-16 z-10 transition-all duration-300`}
+      } fixed top-0 h-14 w-full flex items-center justify-between sm:px-16 z-10 transition-all duration-300`}
     >
       <Link href={"/"}>
         <abbr title="Home">
           <Image src={logo} alt="" width={100} height={100} />
         </abbr>
       </Link>
-      <ol className="flex items-center justify-center text-sm font-semibold">
+      <ol className="flex items-center justify-center text-sm font-semibold max-sm:hidden">
         <li>
           <button className="transition-all duration-300 rounded py-1 px-5 hover:backdrop-blur-lg">
             Vehicles

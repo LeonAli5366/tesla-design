@@ -32,16 +32,18 @@ const VideoSlide = () => {
         <source src={videoSrc} type="video/webm" />
       </video>
       <div className="absolute top-0 left-0 right-0 bottom-[70%] bg-gradient-to-b from-black to-transparent"></div>
-      <div className="absolute top-[13%] left-[21%] right-[40%] bottom-3/4 space-y-5">
-        <h1 className="text-2xl font-bold text-white">
-          Power a Sustainable Home
-        </h1>
-        <p className="text-sm font-medium opacity-90 text-white">
-          Generate, use, store and charge—all with one fully integrated clean
-          energy ecosystem by Tesla. All of our products work together
-          seamlessly, optimizing your energy usage and savings while minimizing
-          your impact on the environment.
-        </p>
+      <div className="absolute top-28 left-0 w-full h-auto">
+        <div className="max-w-[1100px] mx-auto flex flex-col gap-y-5 max-sm:px-5">
+          <h1 className="text-2xl font-bold text-white">
+            Power a Sustainable Home
+          </h1>
+          <p className="text-[13px] font-medium opacity-90 text-white">
+            Generate, use, store and charge—all with one fully integrated clean
+            energy ecosystem by Tesla. All of our <br className="sm:block hidden"/> products work together
+            seamlessly, optimizing your energy usage and savings while
+            minimizing your impact <br className="sm:block hidden"/> on the environment.
+          </p>
+        </div>
       </div>
       <div className="absolute bottom-20 left-[33%] space-y-1 z-10">
         <div className="flex items-center gap-x-2 mb-4">
