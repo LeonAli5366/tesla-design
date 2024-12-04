@@ -11,7 +11,10 @@ const Order = () => {
       <span className="text-sm font-medium opacity-80">Enter Home Details</span>
       <label htmlFor="" className="mt-5 space-y-1">
         <span className="text-sm font-medium opacity-95">Home Address</span>
-        <input type="text" className="w-full h-10 bg-[#F4F4F4] pl-3 text-sm font-semibold opacity-60" />
+        <input
+          type="text"
+          className="w-full h-10 bg-[#F4F4F4] pl-3 text-sm font-semibold opacity-60 focus-within:outline rounded outline-slate-300"
+        />
       </label>
       <label htmlFor="" className="mt-5 space-y-1">
         <div className="flex flex-col">
@@ -22,7 +25,10 @@ const Order = () => {
             One electric bill required
           </span>
         </div>
-        <input type="text" className="w-full h-10 bg-[#F4F4F4] pl-3 text-sm font-semibold opacity-60" />
+        <input
+          type="text"
+          className="w-full h-10 bg-[#F4F4F4] pl-3 text-sm font-semibold opacity-60 focus-within:outline rounded outline-slate-300"
+        />
       </label>
 
       <span className="text-[13px] font-medium opacity-80 mt-5">
@@ -124,7 +130,7 @@ const Order = () => {
       </p>
       <button
         disabled
-        className="w-full h-10 rounded bg-blue-600 text-sm font-medium disabled:opacity-50 text-white mt-5"
+        className="w-full h-10 rounded bg-blue-600 text-sm font-medium disabled:opacity-50 disabled:cursor-not-allowed text-white mt-5"
       >
         Next
       </button>
