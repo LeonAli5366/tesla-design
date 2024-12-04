@@ -53,7 +53,7 @@ const ImageSlide = () => {
     setIsCycling(true); // Start cycling from the selected image
   };
   return (
-    <div className="h-screen flex flex-col items-center justify-center gap-y-8 bg-black">
+    <div className="sm:h-screen flex flex-col items-center justify-center gap-y-8 bg-black">
       <Image
         src={images[currentImageIndex]}
         alt={`Image ${currentImageIndex + 1}`}
@@ -61,21 +61,25 @@ const ImageSlide = () => {
         height={480}
         className="rounded"
       />
-      <div className="max-w-[1130px] mx-auto flex justify-between gap-7">
-        {content.map((section, index) => (
-          <div
-            key={index}
-            onClick={() => handleContentClick(index)} // Clicking the content will update image
-            className={`w-full flex flex-col gap-y-3 border-t-2 pt-3 cursor-pointer transition-opacity ${
-              currentImageIndex === index ? "opacity-100" : "opacity-50"
-            }`} // Active section has full opacity, others have reduced opacity
-          >
-            <span className="text-lg font-bold text-white">
-              {section.title}
-            </span>
-            <p className="text-[13px] font-medium">{section.description}</p>
-          </div>
-        ))}
+      <div className="max-w-[1130px] mx-auto overflow-hidden w-full">
+        <div
+          className={`max-sm:w-[300vw] flex justify-between gap-7 max-sm:px-5`}
+        >
+          {content.map((section, index) => (
+            <div
+              key={index}
+              onClick={() => handleContentClick(index)} // Clicking the content will update image
+              className={`w-full flex flex-col gap-y-3 border-t-2 pt-3 cursor-pointer transition-opacity ${
+                currentImageIndex === index ? "opacity-100" : "opacity-50"
+              }`} // Active section has full opacity, others have reduced opacity
+            >
+              <span className="sm:text-lg text-sm font-bold text-white">
+                {section.title}
+              </span>
+              <p className="text-[13px] font-medium">{section.description}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

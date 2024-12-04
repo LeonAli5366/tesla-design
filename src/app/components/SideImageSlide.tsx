@@ -49,7 +49,7 @@ const SideImageSlide = () => {
   return (
     <div className="bg-black pb-20">
       <div className="py-[64px]">
-        <div className="max-w-[1100px] mx-auto flex items-center justify-between">
+        <div className="max-w-[1100px] mx-auto flex max-sm:flex-col-reverse items-center justify-between max-sm:px-5 max-sm:gap-y-5">
           <div className="space-y-8">
             {content.map((section, index) => (
               <div
@@ -70,13 +70,15 @@ const SideImageSlide = () => {
               </div>
             ))}
           </div>
-          <Image
-            src={images[currentImageIndex]}
-            alt={`Image ${currentImageIndex + 1}`}
-            width={620}
-            height={465}
-            className="rounded-lg ml-12"
-          />
+          <div className="max-sm:w-full max-sm:h-full">
+            <Image
+              src={images[currentImageIndex]}
+              alt={`Image ${currentImageIndex + 1}`}
+              width={620}
+              height={465}
+              className="rounded-lg sm:ml-12"
+            />
+          </div>
         </div>
       </div>
     </div>

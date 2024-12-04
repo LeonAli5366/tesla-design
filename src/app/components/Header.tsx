@@ -40,36 +40,25 @@ export default function Header() {
       <ol className="flex items-center justify-center text-sm font-semibold max-sm:hidden">
         <li>
           <button className="transition-all duration-300 rounded py-1 px-5 hover:backdrop-blur-lg">
-            Vehicles
+            Water
           </button>
         </li>
         <li>
           <button className="transition-all duration-300 rounded py-1 px-5 hover:backdrop-blur-lg">
-            Energy
+            Solar
           </button>
         </li>
         <li>
           <button className="transition-all duration-300 rounded py-1 px-5 hover:backdrop-blur-lg">
-            Charging
-          </button>
-        </li>
-        <li>
-          <button className="transition-all duration-300 rounded py-1 px-5 hover:backdrop-blur-lg">
-            Discover
-          </button>
-        </li>
-        <li>
-          <button className="transition-all duration-300 rounded py-1 px-5 hover:backdrop-blur-lg">
-            Shop
-          </button>
-        </li>
-        <li>
-          <button className="transition-all duration-300 rounded py-1 px-5 hover:backdrop-blur-lg">
-            We, Robot
+            HVAC
           </button>
         </li>
       </ol>
-      <div className="flex items-center gap-x-3"></div>
+      <div className="flex items-center gap-x-3">
+        <button className="transition-all duration-300 text-white rounded text-sm py-1 px-5 bg-blue-500 hover:scale-110">
+          Contact
+        </button>
+      </div>
     </header>
   );
 }

@@ -3,31 +3,39 @@ import VideoSlide from "../components/VideoSlide";
 import Image from "next/image";
 import ImageSlide from "../components/ImageSlide";
 import SideImageSlide from "../components/SideImageSlide";
+import Link from "next/link";
 
 const about = () => {
   return (
     <>
+      {/* sec 1 */}
       <div className="w-full h-screen relative">
         <video className="w-full h-full object-cover" autoPlay muted loop>
           <source src="/videos/video1.webm" type="video/webm" />
         </video>
         <div className="absolute top-0 left-0 bottom-0 right-0 flex flex-col items-center justify-between sm:my-16 my-10">
           <div className="text-center space-y-2 mt-24">
-            <h1 className="xl:text-4xl text-2xl font-bold text-white">Solar Panels</h1>
+            <h1 className="xl:text-4xl text-2xl font-bold text-white">
+              Solar Panels
+            </h1>
             <h1 className="text-[13px] font-semibold text-white">
               Save on Energy, Power Your Home
             </h1>
           </div>
           <div className="flex max-sm:flex-col items-center justify-between gap-5 max-w-[544px] w-full sm:h-[40px] h-[100px] max-sm:px-5">
-            <button className="w-full h-full bg-white rounded text-[#393C41] font-semibold text-sm">
-              Order Now
-            </button>
+            <Link
+              href={"/solarpanels/order"}
+              className="w-full h-full bg-white rounded text-[#393C41] font-semibold text-sm"
+            >
+              <button className="w-full h-full">Order Now</button>
+            </Link>
             <button className="w-full h-full hover:bg-white rounded border-[3px] text-white hover:text-[#393C41] border-white text-sm font-semibold transition-all duration-300">
               Schedule a Consultation
             </button>
           </div>
         </div>
       </div>
+      {/* sec 2 */}
       <div className="text-center bg-white text-black sm:pt-[120px] pt-10 sm:px-[48px] px-5 pb-[40px] space-y-2">
         <h1 className="sm:text-2xl text-[22px] text-[#171A20] font-bold opacity-90">
           Save With Solar Over Time
@@ -39,7 +47,9 @@ const about = () => {
           price for your solar system.
         </p>
       </div>
+      {/* sec 3 */}
       <div className="w-full h-screen bg-image4 bg-cover bg-center"></div>
+      {/* sec 4 */}
       <div className="flex sm:justify-center bg-black">
         <div className="flex max-sm:flex-col justify-center max-w-6xl mx-auto my-20 sm:gap-x-32 gap-10 max-sm:px-5">
           <div className="w-full space-y-2">
@@ -52,7 +62,9 @@ const about = () => {
             </p>
           </div>
           <div className="w-full space-y-2">
-            <h1 className="sm:text-2xl text-lg font-bold text-white">Tax Incentives</h1>
+            <h1 className="sm:text-2xl text-lg font-bold text-white">
+              Tax Incentives
+            </h1>
             <p className="text-sm font-medium opacity-90 text-white">
               You may qualify for{" "}
               <span className="underline underline-thickness underline-offset-4 cursor-pointer">
@@ -72,17 +84,25 @@ const about = () => {
           </div>
         </div>
       </div>
+      {/* sec 5 */}
       <VideoSlide />
-      <div className="h-screen flex flex-col items-center justify-center gap-y-8 bg-black">
-        <Image
-          src={"https://i.postimg.cc/Zqv54Qsw/sleek-durable-desktop.avif"}
-          alt=""
-          width={1130}
-          height={580}
-          className="rounded"
-        />
-        <div className="max-w-[1130px] mx-auto flex justify-between">
-          <h1 className="text-2xl font-bold text-white w-[70%]">
+      {/* sec 6 */}
+      <div className="sm:h-screen flex flex-col items-center justify-center gap-y-8 bg-black">
+        <picture>
+          <source
+            srcSet="https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/sleek-durable-mobile"
+            media="(max-width: 640px)"
+          />
+          <Image
+            src={"https://i.postimg.cc/Zqv54Qsw/sleek-durable-desktop.avif"}
+            alt=""
+            width={1130}
+            height={580}
+            className="rounded"
+          />
+        </picture>
+        <div className="max-w-[1130px] mx-auto flex max-sm:flex-col justify-between max-sm:gap-y-5 max-sm:px-5 max-sm:mb-16">
+          <h1 className="sm:text-2xl text-xl font-bold text-white w-[70%]">
             Sleek and Durable
           </h1>
           <p className="w-full text-[13px] font-medium">
@@ -94,15 +114,32 @@ const about = () => {
           </p>
         </div>
       </div>
+      {/* sec 7 */}
       <ImageSlide />
+      {/* sec 8 */}
       <div className="py-20 bg-black relative">
         <div className="absolute top-0 left-0 right-0 bottom-[78%] bg-gradient-to-b from-black to-transparent"></div>
-        <div className="w-full h-screen bg-image5 bg-cover bg-center flex items-end">
-          <div className="max-w-[1100px] mx-auto flex mb-10 gap-x-10 z-10">
-            <h1 className="text-2xl font-bold w-[40%] text-white">
+        <div className="w-full sm:h-screen flex max-sm:flex-col max-sm:gap-y-5 sm:items-end relative">
+          <div className="sm:absolute sm:top-0 sm:left-0 w-full sm:h-full">
+            <picture>
+              <source
+                media="(max-width: 640px)"
+                srcSet="https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/lights-stay-on-mobile"
+              />
+              <Image
+                src={"/images/lights-stay-on-desktop.webp"}
+                alt="lights-stay-on-desktop"
+                width={1900}
+                height={1200}
+                className=""
+              />
+            </picture>
+          </div>
+          <div className="max-w-[1100px] mx-auto flex max-sm:flex-col sm:gap-x-10 gap-y-5 z-10 max-sm:px-5">
+            <h1 className="text-2xl sm:font-bold font-semibold sm:w-[40%] text-white">
               Grid Goes Down, Lights Stay On
             </h1>
-            <p className="w-full text-[13px] font-medium pr-20 text-white">
+            <p className="w-full text-[13px] font-medium sm:pr-20 text-white">
               Solar panels generate energy for you to use in your home. When
               paired with{" "}
               <span className="underline underline-offset-2">Powerwall</span>,
@@ -112,15 +149,16 @@ const about = () => {
             </p>
           </div>
         </div>
-        <div className="absolute top-[70%] left-0 right-0 bottom-0 bg-gradient-to-t from-black to-transparent"></div>
+        <div className="absolute top-[70%] left-0 right-0 bottom-0 max-sm:hidden bg-gradient-to-t from-black to-transparent"></div>
       </div>
-      <div className="h-screen bg-black">
-        <div className="flex flex-col justify-between max-w-[1100px] mx-auto h-full">
-          <div className="flex items-center justify-between h-full">
+      {/* sec 9 */}
+      <div className="sm:h-screen bg-black">
+        <div className="flex flex-col justify-between max-w-[1100px] mx-auto h-full max-sm:px-5">
+          <div className="flex max-sm:flex-col-reverse items-center sm:justify-between h-full">
             <div className="flex flex-col gap-y-5">
               <h1 className="text-2xl font-semibold text-white">
                 24/7 Monitoring,
-                <br /> Maximum Control
+                <br className="max-sm:hidden" /> Maximum Control
               </h1>
               <p className="text-sm font-medium pr-10 text-white">
                 When you install solar with Powerwall, the Tesla app gives you
@@ -134,7 +172,7 @@ const about = () => {
               height={728}
             />
           </div>
-          <div className="flex justify-between mb-20 gap-x-40">
+          <div className="flex max-sm:flex-col sm:justify-between sm:mb-20 max-sm:my-16 sm:gap-x-40 max-sm:gap-y-10">
             <div className="flex flex-col gap-y-2">
               <h1 className="text-xl font-semibold text-white">
                 Customize Preferences
@@ -165,9 +203,24 @@ const about = () => {
           </div>
         </div>
       </div>
+      {/* sec 10 */}
       <div className="bg-black pb-20">
-        <div className="h-screen bg-image6 bg-cover bg-center flex items-end">
-          <div className="max-w-[1100px] mx-auto flex items-center gap-x-24 mb-10">
+        <div className="sm:h-screen flex max-sm:flex-col sm:items-end relative">
+          <div className="sm:absolute sm:top-0 sm:left-0 w-full sm:h-full">
+            <picture>
+              <source
+                media="(max-width: 640px)"
+                srcSet="https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/powering-on-mobile"
+              />
+              <Image
+                src={"/images/powering-on-desktop.webp"}
+                alt="powering-on-desktop"
+                width={1900}
+                height={1000}
+              />
+            </picture>
+          </div>
+          <div className="max-w-[1100px] mx-auto flex max-sm:flex-col sm:items-center sm:gap-x-24 max-sm:gap-y-5 sm:mb-10 max-sm:px-5 max-sm:my-10 z-10">
             <h1 className="text-2xl font-semibold text-white text-nowrap">
               Getting to Power On
             </h1>
@@ -182,17 +235,19 @@ const about = () => {
           </div>
         </div>
       </div>
+      {/* sec 11 */}
       <SideImageSlide />
+      {/* sec 12 */}
       {/* specs */}
       <div className="bg-black py-[108px]">
-        <div className="max-w-[1100px] mx-auto">
-          <h1 className="text-2xl font-bold">
+        <div className="max-w-[1100px] mx-auto max-sm:px-5">
+          <h1 className="sm:text-2xl text-xl font-bold">
             Solar Panel System <span className="font-semibold">Specs</span>
           </h1>
           {/* line 1 */}
-          <div className="pt-16 space-y-5">
+          <div className="sm:pt-16 pt-14 space-y-5">
             <span className="text-lg font-semibold">Design</span>
-            <div className="flex gap-x-24 pb-[32px]">
+            <div className="sm:flex sm:gap-x-24 pb-[32px] max-sm:grid max-sm:grid-cols-2 max-sm:gap-y-10">
               <div>
                 <small className="opacity-50">Dimensions</small>
                 <p className="text-sm font-medium">
@@ -218,7 +273,7 @@ const about = () => {
           {/* line 2 */}
           <div className="pt-10 space-y-5">
             <span className="text-lg font-semibold">Features</span>
-            <div className="flex gap-x-24 pb-[32px]">
+            <div className="sm:flex sm:gap-x-24 pb-[32px] max-sm:grid max-sm:grid-cols-2 max-sm:gap-y-10">
               <div>
                 <small className="opacity-50">Wattage</small>
                 <p className="text-sm font-medium">405 W</p>
@@ -227,14 +282,16 @@ const about = () => {
                 <small className="opacity-50">Operating Temperature</small>
                 <p className="text-sm font-medium">-40°F up to +185°F</p>
               </div>
-              <div className="flex gap-x-10">
-                <div>
+              <div className="flex sm:gap-x-10 max-sm:justify-between max-sm:col-span-2">
+                <div className="max-sm:w-full">
                   <small className="opacity-50">Inverter Power</small>
-                  <p className="text-sm font-medium">
-                    7.6 kW / 5.7 kW / 5 kW / 3.8 <br /> kW <br /> 98% efficiency
+                  <p className="text-sm font-medium max-sm:pr-5">
+                    7.6 kW / 5.7 kW / 5 kW / 3.8{" "}
+                    <br className="max-sm:hidden" /> kW{" "}
+                    <br className="max-sm:hidden" /> 98% efficiency
                   </p>
                 </div>
-                <div>
+                <div className="max-sm:w-full">
                   <small className="opacity-50">Certification</small>
                   <p className="text-sm font-medium">
                     IEC / UL 61730, CEC Listed,
@@ -248,7 +305,7 @@ const about = () => {
           {/* line 3 */}
           <div className="pt-10 space-y-5">
             <span className="text-lg font-semibold">Warranty</span>
-            <div className="flex gap-x-24 pb-[32px]">
+            <div className="sm:flex sm:gap-x-24 pb-[32px] max-sm:grid max-sm:grid-cols-2 max-sm:gap-y-10">
               <div>
                 <small className="opacity-50">Warranty</small>
                 <p className="text-sm font-medium">
@@ -271,15 +328,16 @@ const about = () => {
           </div>
         </div>
       </div>
-      <div className="h-screen bg-black">
-        <div className="max-w-[1100px] mx-auto h-full flex items-center justify-between gap-x-20">
-          <div className="flex flex-col gap-y-4">
+      {/* sec 13 */}
+      <div className="sm:h-screen bg-black">
+        <div className="max-w-[1100px] mx-auto h-full flex max-sm:flex-col items-center justify-between sm:gap-x-20 max-sm:px-5 max-sm:py-20">
+          <div className="flex flex-col max-sm:items-center gap-y-4">
             <h1 className="text-2xl font-bold">Install Solar Panels</h1>
-            <p className="text-[13px] font-medium text-white opacity-90">
+            <p className="text-[13px] font-medium text-white opacity-90 max-sm:text-center">
               Design your solar system or schedule a virtual consultation with a
               Tesla Advisor to learn more.
             </p>
-            <div className="flex justify-between gap-x-7 pr-3">
+            <div className="flex max-sm:w-full max-sm:flex-col sm:justify-between gap-x-7 gap-y-5 sm:pr-3">
               <button className="w-full hover:bg-white border-white hover:text-black border-[3px] py-2 rounded text-[13px] font-semibold transition-colors duration-300 ease-in-out">
                 Order Now
               </button>
