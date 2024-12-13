@@ -13,24 +13,24 @@ const ImageSlide = () => {
   // Content for each image
   const content = [
     {
-      title: "Simple Aesthetic",
+      title: "Sleek Design",
       description:
-        "Panels and skirts are all black, creating a uniform, monochromatic look.",
+        "All-black panels deliver a clean, uniform, and modern monochromatic appearance.",
     },
     {
-      title: "Weather Resistant",
+      title: "Built for All Weather",
       description:
-        "Installation points are sealed to protect against rain, snow and ice.",
+        "Sealed installation points ensure protection against rain, snow, and ice, keeping your system reliable year-round.",
     },
     {
-      title: "Easy Installation",
+      title: "Hassle-Free Installation",
       description:
-        "Proprietary hardware and streamlined installation help to minimize impact to your roof.",
+        "Simplified hardware and efficient installation reduce roof impact, with some setups requiring no tools at all.",
     },
     {
-      title: "Low Profile",
+      title: "Discrete and Streamlined",
       description:
-        "Rail-free mounting keeps panels close to your roof and panel skirts hide hardware and edges from view.",
+        "Ultra-thin panels offer a low-profile design that blends seamlessly with your roof, terrace, or balcony for a subtle and elegant look.",
     },
   ];
 

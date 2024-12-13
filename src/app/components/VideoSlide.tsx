@@ -35,15 +35,13 @@ const VideoSlide = () => {
       <div className="absolute top-28 left-0 w-full h-auto">
         <div className="max-w-[1100px] mx-auto flex flex-col gap-y-5 max-sm:px-5">
           <h1 className="text-2xl font-bold text-white">
-            Power a Sustainable Home
+            Power Your Home or apartment Sustainably
           </h1>
           <p className="text-[13px] font-medium opacity-90 text-white">
-            Generate, use, store and charge—all with one fully integrated clean
-            energy ecosystem by Tesla. All of our{" "}
-            <br className="sm:block hidden" /> products work together
-            seamlessly, optimizing your energy usage and savings while
-            minimizing your impact <br className="sm:block hidden" /> on the
-            environment.
+            Experience a fully integrated clean energy ecosystem with our
+            products—designed to generate, use, store, and charge seamlessly.
+            Our interconnected products maximize energy efficiency, reduce
+            environmental impact, and help you save on costs.
           </p>
         </div>
       </div>
@@ -102,11 +100,11 @@ const VideoSlide = () => {
             }`}
           >
             <h1 className="sm:text-lg sm:font-bold font-semibold text-white">
-              Generate Energy
+              Generate Clean Energy
             </h1>
             <p className="text-[13px] font-medium text-white">
-              Generate your own clean energy whenever the sun is shining with
-              Tesla solar panels.
+              Harness the sun&apos;s power with our solar panels to produce
+              renewable energy whenever sunlight is available.
             </p>
           </div>
           {/* tile & des 2 */}
@@ -116,10 +114,11 @@ const VideoSlide = () => {
             }`}
           >
             <h1 className="sm:text-lg sm:font-bold font-semibold text-white">
-              Use Energy
+              Power Your Life
             </h1>
             <p className="text-[13px] font-medium text-white">
-              Power everything from your TV to the internet with solar energy.
+              Use solar energy to run everything from your TV to your internet,
+              keeping your home and apartment running sustainably.
             </p>
           </div>
           {/* tile & des 3 */}
@@ -129,11 +128,11 @@ const VideoSlide = () => {
             }`}
           >
             <h1 className="sm:text-lg sm:font-bold font-semibold text-white">
-              Store Any Extra
+              Store Excess Energy
             </h1>
             <p className="text-[13px] font-medium text-white">
-              Save excess solar energy in Powerwall for use during storms and
-              outages, or when utility prices are high.
+              Save surplus solar power in Powerwall for use during storms,
+              outages, or when utility rates spike.
             </p>
           </div>
           {/* tile & des 4 */}
@@ -146,8 +145,8 @@ const VideoSlide = () => {
               Charge Your EV
             </h1>
             <p className="text-[13px] font-medium text-white">
-              Charge your electric vehicle with clean energy at home using
-              Mobile Connector or Wall Connector.
+              Power your electric vehicle at home or apartment with clean energy
+              using a wall connector.
             </p>
           </div>
         </div>

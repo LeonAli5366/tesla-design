@@ -70,15 +70,13 @@ const SideImageSlide = () => {
               </div>
             ))}
           </div>
-          <div className="max-sm:w-full max-sm:h-full">
-            <Image
-              src={images[currentImageIndex]}
-              alt={`Image ${currentImageIndex + 1}`}
-              width={620}
-              height={465}
-              className="rounded-lg sm:ml-12"
-            />
-          </div>
+          <Image
+            src={images[currentImageIndex]}
+            alt={`Image ${currentImageIndex + 1}`}
+            width={620}
+            height={465}
+            className="rounded-lg sm:ml-12"
+          />
         </div>
       </div>
     </div>

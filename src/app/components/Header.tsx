@@ -3,6 +3,17 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
+type Navbar = {
+  title: string;
+  href: string;
+};
+
+const NavData = [
+  { title: "Water", href: "Water" },
+  { title: "Solar panels", href: "solarpanels" },
+  { title: "HVAC", href: "hvac" },
+];
+
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [logo, setLogo] = useState("/images/logo-white.png");
@@ -30,7 +41,7 @@ export default function Header() {
     <header
       className={`${
         isScrolled ? "bg-white text-black shadow" : "bg-transparent text-white"
-      } fixed top-0 h-14 w-full flex items-center justify-between sm:px-16 z-10 transition-all duration-300`}
+      } sm:fixed sm:top-0 h-14 w-full flex items-center justify-between sm:px-16 px-5 z-10 transition-all duration-300`}
     >
       <Link href={"/"}>
         <abbr title="Home">
@@ -38,27 +49,26 @@ export default function Header() {
         </abbr>
       </Link>
       <ol className="flex items-center justify-center text-sm font-semibold max-sm:hidden">
-        <li>
-          <button className="transition-all duration-300 rounded py-1 px-5 hover:backdrop-blur-lg">
-            Water
-          </button>
-        </li>
-        <li>
-          <button className="transition-all duration-300 rounded py-1 px-5 hover:backdrop-blur-lg">
-            Solar
-          </button>
-        </li>
-        <li>
-          <button className="transition-all duration-300 rounded py-1 px-5 hover:backdrop-blur-lg">
-            HVAC
-          </button>
-        </li>
+        {NavData?.map((nav: Navbar, index) => {
+          return (
+            <li key={index}>
+              <button className="transition-all duration-300 rounded py-1 px-5 hover:backdrop-blur-lg">
+                <Link href={`/${nav.href}`} className="w-full h-full">
+                  {nav.title}
+                </Link>
+              </button>
+            </li>
+          );
+        })}
       </ol>
-      <div className="flex items-center gap-x-3">
+      <div className="flex items-center gap-x-3 max-sm:hidden">
         <button className="transition-all duration-300 text-white rounded text-sm py-1 px-5 bg-blue-500 hover:scale-110">
           Contact
         </button>
       </div>
+      <button className="text-sm font-semibold text-white backdrop-blur px-3 py-1 rounded sm:hidden">
+        Menu
+      </button>
     </header>
   );
 }
